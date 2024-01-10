@@ -1,0 +1,235 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+#hero{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(45deg, rgba(11, 11, 14, 0.85), rgba(15, 15, 15, 0.85)), url("wallpaper.jpg");
+    background-position: center;
+    background-size: cover;
+    overflow: none;
+}
+
+.login-box{
+    background-color: white;
+    height: 70vh;
+    width: 25vw;
+    border-radius: 50px;
+}
+
+.title-box{
+    background-color: slateblue;
+    height: 15%;
+    border-radius: 50px 50px 0px 0px;
+}
+
+.login-title{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    color: white;
+    font-size: 2.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+
+/* part box */
+
+.part-box{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-desc{
+    height: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    color: slateblue;
+    font-size: 1.4rem;
+}
+
+.login-user, .login-password{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    width: 75%;
+    padding: 20px 0px;
+    padding-left: 10px;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 3px grey solid;
+}
+
+input:hover{
+    border-bottom: 3px slateblue solid;
+    transition: .2s ease-in-out;
+}
+
+/* guzik */
+
+.login-button{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+button{
+    height: 50px;
+    width: 75%;
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: slateblue;
+    border: none;
+}
+
+/* registerka */
+
+.login-register{
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    overflow: none;
+
+}
+
+a{
+    width: 70%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-decoration: none;
+    padding: 0px 20% 0px 25%;
+    transition: .3s;
+}
+
+a:hover{
+    color: slateblue;
+    transition: .3s;
+}
+
+
+
+
+
+/* 
+
+.login-box{
+    height: 65vh;
+    width: 25vw;
+    border-radius: 50px;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1), 0 2rgba(255, 255, 255, 0.767),0,0,0.2);
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.login-title{
+    width: 100%;
+    height: 20%;
+    background-color: slateblue;
+    border-radius: 50px 50px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px slateblue solid;
+
+}
+
+
+h2{
+    color: white;
+    font-size: 35px;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+input{
+    font-size: 18px;
+    text-align: center;
+    height: 60px;
+    width: 300px;;
+    background-color: transparent;
+    border: none;
+    border-bottom: 4px gray solid;
+    transition: .5s;
+}
+
+input:hover{
+    border-bottom: 4px slateblue solid;
+    transition: .5s;
+}
+
+.login-user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.login-password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-button{
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+button{
+    border: 0;
+    background-color: rgb(54, 2, 88);
+    height: 65px;
+    width: 300px;
+    border-radius: 50px;
+    transition: .5s;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+button:hover{
+    background-color: slateblue;
+    transition: .5s;
+}
+
+*/
