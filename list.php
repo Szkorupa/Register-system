@@ -43,9 +43,9 @@
                 <?php
                     try{
                         $pdo = new PDO('mysql:host=localhost;dbname=jetdatabase', 'root');
-                        $zapytanie = $pdo->query('SELECT login, password FROM users');
+                        $zapytanie = $pdo->query('SELECT idu, login, password FROM users');
                         foreach ($zapytanie as $wiersz){
-                            echo $wiersz['login'] . ' - ' . $wiersz['password'] . '<br>';
+                            echo $wiersz['idu'] . ' - ' . $wiersz['login'] . ' - ' . $wiersz['password'] . '<br>';
                         }
                     $pdo = null;
                     }
