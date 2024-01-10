@@ -1,32 +1,38 @@
-<?php
-$dbname = "jetdatabase";
-$user = "root";
-$password = "";
-$host = "localhost";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="error.css">
+    <title>Jet Broker Clients</title>
+</head>
+<body>
+    <div class="box">
+        <div class="text-box">
+        <?php
+        $dbname = "jetdatabase";
+        $user = "root";
+        $password = "";
+        $host = "localhost";
 
-            $polaczenie = mysqli_connect($host, $user, $password, $dbname);
-            if (!$polaczenie) {
-                exit("Błąd połączenia z bazą danych" . mysqli_connect_error());
-            } else {
-                echo "<p>Połączono z bazą danych</p>";
+                    $polaczenie = mysqli_connect($host, $user, $password, $dbname);
+            
+            $password = $_POST["password"];
+            $user = $_POST["login"];
+
+
+            $dodaj = "INSERT INTO users VALUES ('', '$user', '$password')";
+            $zapytanie = mysqli_query($polaczenie, $dodaj);
+            if (!$zapytanie === true) {
+                header("error2.php");
+            } else{
+                echo "<h1>Użytkownik " . $user . " " . "został dodany do bazy</h1>";
             }
-    
-    $password = $_POST["password"];
-    $user = $_POST["login"];
 
-
-    $dodaj = "INSERT INTO users VALUES ('', '$user', '$password')";
-    $zapytanie = mysqli_query($polaczenie, $dodaj);
-    if (!$zapytanie === true) {
-        echo "Klient nie został dodany";
-    } else{
-        header("Location: login.php");
-        echo "Użytkownik " . $user . " " . "został dodany do bazy";
-    }
-
-    mysqli_close($polaczenie);
-?>
-
-<!-- działa -->
-
-Stworzyć powiadomienia z mało liter i dużo liter.
+            mysqli_close($polaczenie);
+        ?>
+            <a href="login.php"><h2>Logowanie</h2></a>
+        </div>
+    </div>
+</body>
+</html>

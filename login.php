@@ -52,7 +52,7 @@
 
                 <div class="login-register">
                     <a href="register.php"><h4>Zarejestruj</h4></a>
-                    <a href=""><h4>Zapomniałem hasła</h4></a>
+                    <a href="list.php"><h4>Zapomniałem hasła</h4></a>
                 </div>
             </form>
         </div>
