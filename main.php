@@ -16,6 +16,7 @@
                 <nav>
                     <ul>
                         <a href="main.php"><li>Strona główna</li></a>
+                        <a href="komentarze.php"><li>Komentarze</li></a>
                         <a href="list.php"><li>Lista klientów</li></a>
                         <a href="login.php"><li>Wyloguj się</li></a>
                     </ul>
@@ -23,9 +24,9 @@
             </div>
             <div class="background">
             <div class="background-image">
-                <h2>Sprawdź liste obecnych klientów</h2>
+                <h2>Sprawdź komentarze na stronie</h2>
                 <div class="button-box">
-                    <a href="list.php"><button>Lista klientów</button></a>
+                    <a href="list.php"><button>Przekierowanie</button></a>
                 </div>
             </div>
             </div>
