@@ -39,11 +39,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`IDU`, `login`, `password`) VALUES
 (10, 'admin', 'admin123'),
-(11, 'admin', 'admin123'),
-(12, '', 'admin123'),
-(13, '', 'balix123'),
-(14, 'bialix', 'balix123'),
-(15, 'bialix123', 'balix123');
+(11, 'artwoj', '951963987');
 
 --
 -- Indeksy dla zrzutów tabel
