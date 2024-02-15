@@ -16,7 +16,7 @@
                 <nav>
                     <ul>
                         <a href="main.php"><li>Strona główna</li></a>
-                        <a href="komentarze.php"><li>Komentarze</li></a>
+                        <a href="komentarz.php"><li>Komentarze</li></a>
                         <a href="list.php"><li>Lista klientów</li></a>
                         <a href="login.php"><li>Wyloguj się</li></a>
                     </ul>
