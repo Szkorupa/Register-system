@@ -61,6 +61,7 @@
         </div>
         <br>
         <a href="main.php">Strona glowna</a>
+        <a href="komentarz.php">Napisz swoj komentarz<\a>
             </form>
             
         </div>
