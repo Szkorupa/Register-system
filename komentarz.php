@@ -36,7 +36,7 @@
                 </div>
             </div>
             
-            <form class="part-box" action="kom.php" method="POST">
+            <form class="part-box" action="kom-php.php" method="POST">
             <h3><label for="komentarz">Twój komentarz</label></h3>
             <input type="text" id="uzytkownik" name="uzytkownik">
                 <div class="login-desc">

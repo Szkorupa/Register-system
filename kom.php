@@ -36,7 +36,7 @@
                 </div>
             </div>
             
-            <form class="part-box" action="kom.php" method="POST">
+            <form class="part-box" method="POST">
                 <div class="login-desc2">
                 <?php
         $dbname = "jetdatabase";
@@ -46,14 +46,10 @@
 
                     $polaczenie = mysqli_connect($host, $user, $password, $dbname);
 
-            $zawartosc = mysqli_real_escape_string($polaczenie, $_POST["komentarz"]);
-            $uzytkownik = mysqli_real_escape_string($polaczenie, $_POST["uzytkownik"]);
-            $dodaj = "INSERT INTO komentarze VALUES ('', '$zawartosc', '$uzytkownik')";
-            $zapytanie = mysqli_query($polaczenie, $dodaj);
-            $pdo = new PDO('mysql:host=localhost;dbname=jetdatabase', 'root');
-                        $zapytanie = $pdo->query('SELECT zawartosc, uzytkownik FROM komentarze');
-                        foreach ($zapytanie as $wiersz){
-                            echo $wiersz['uzytkownik'] . "<br>" . $wiersz['zawartosc'] . '<br>' . '<br>';
+            
+            $records = $polaczenie->query(" SELECT komentarze.Zawartosc, komentarze.uzytkownik FROM komentarze");
+                        while(list($zawartosc2, $uzytkownik2) = mysqli_fetch_row($records)){
+                            echo $uzytkownik2 . "<br>" . $zawartosc2 . '<br>' . '<br>';
                         }
             mysqli_close($polaczenie);
         ?>
@@ -61,7 +57,7 @@
         </div>
         <br>
         <a href="main.php">Strona glowna</a>
-        <a href="komentarz.php">Napisz swoj komentarz<\a>
+        <a href="komentarz.php">Napisz swoj komentarz </a>
             </form>
             
         </div>
