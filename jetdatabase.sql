@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 10 Sty 2024, 17:31
--- Wersja serwera: 10.4.27-MariaDB
--- Wersja PHP: 8.1.12
+-- Generation Time: Feb 21, 2024 at 09:01 PM
+-- Wersja serwera: 10.4.32-MariaDB
+-- Wersja PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,8 +18,22 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Baza danych: `jetdatabase`
+-- Database: `jetdatabase`
 --
+CREATE DATABASE IF NOT EXISTS `jetdatabase` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `jetdatabase`;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `komentarze`
+--
+
+CREATE TABLE `komentarze` (
+  `IDK` int(11) NOT NULL,
+  `Zawartosc` varchar(255) NOT NULL,
+  `Uzytkownik` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -34,20 +48,14 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Zrzut danych tabeli `users`
---
-
-INSERT INTO `users` (`IDU`, `login`, `password`) VALUES
-(10, 'admin', 'admin123'),
-(11, 'admin', 'admin123'),
-(12, '', 'admin123'),
-(13, '', 'balix123'),
-(14, 'bialix', 'balix123'),
-(15, 'bialix123', 'balix123');
-
---
 -- Indeksy dla zrzutów tabel
 --
+
+--
+-- Indeksy dla tabeli `komentarze`
+--
+ALTER TABLE `komentarze`
+  ADD PRIMARY KEY (`IDK`);
 
 --
 -- Indeksy dla tabeli `users`
@@ -56,14 +64,20 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`IDU`);
 
 --
--- AUTO_INCREMENT dla zrzuconych tabel
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT dla tabeli `users`
+-- AUTO_INCREMENT for table `komentarze`
+--
+ALTER TABLE `komentarze`
+  MODIFY `IDK` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
+--
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `IDU` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `IDU` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
