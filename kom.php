@@ -43,13 +43,11 @@
         $user = "root";
         $password = "";
         $host = "localhost";
-
-                    $polaczenie = mysqli_connect($host, $user, $password, $dbname);
-
             
-            $records = $polaczenie->query(" SELECT komentarze.Zawartosc, komentarze.uzytkownik FROM komentarze");
-                        while(list($zawartosc2, $uzytkownik2) = mysqli_fetch_row($records)){
-                            echo $uzytkownik2 . "<br>" . $zawartosc2 . '<br>' . '<br>';
+                    $polaczenie = mysqli_connect($host, $user, $password, $dbname);
+                $records = $polaczenie->query(" SELECT komentarze.Zawartosc, komentarze.uzytkownik FROM komentarze");
+                        while(list($zawartosc, $uzytkownik) = mysqli_fetch_row($records)){
+                            echo $uzytkownik . "<br>" . $zawartosc . '<br>' . '<br>';
                         }
             mysqli_close($polaczenie);
         ?>

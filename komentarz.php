@@ -43,7 +43,10 @@
                     
                     <input type="text" id="komentarz" name="komentarz">
                 </div>
-                <button>Wyślij</button>
+                <button>Wyślij
+
+                
+                </button>
                 <div id="komentarz1"></div>
             </form>
             
