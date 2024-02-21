@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="register.css">
-    <title>Jet Broker Clients</title>
+    <title>Roast Website</title>
 </head>
 <body>
     <div id="hero">
@@ -32,7 +32,7 @@
         <div class="login-box">
             <div class="title-box">
                 <div class="login-title">
-                    <h2>Jet Database</h2>
+                    <h2>Roast Website</h2>
                 </div>
             </div>
             
@@ -42,10 +42,10 @@
                 </div>
                 
                 <div class="register-user">
-                    <input type="text" placeholder="Login" name="login" required>
+                    <input type="text" placeholder="Login" name="login" required="">
                 </div>
                 <div class="register-password">
-                    <input type="password" placeholder="Hasło"  name="password" required>
+                    <input type="password" placeholder="Hasło"  name="password" required="">
                 </div>
                 <div class="register-button">
                     <button type="submit">Utwórz</button>
