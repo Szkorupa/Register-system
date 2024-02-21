@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="list.css">
-    <title>Roast Website</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="komentarz.css">
 </head>
 <body>
     <div id="hero">
@@ -32,32 +32,36 @@
         <div class="login-box">
             <div class="title-box">
                 <div class="login-title">
-                    <h2>Roast Website</h2>
+                    <h2>Komentarze</h2>
                 </div>
             </div>
             
-            <form class="part-box" action="logowanie.php" method="POST">
-                <div class="login-desc">
-                    <h3>Lista użytkowników</h3>
-                </div>
+            <form class="part-box" method="POST">
+                <div class="login-desc2">
                 <?php
-                    try{
-                        $pdo = new PDO('mysql:host=localhost;dbname=jetdatabase', 'root');
-                        $zapytanie = $pdo->query('SELECT idu, login, password FROM users');
-                        foreach ($zapytanie as $wiersz){
-                            echo $wiersz['idu'] . ' - ' . $wiersz['login'] . ' - ' . $wiersz['password'] . '<br>';
+        $dbname = "jetdatabase";
+        $user = "root";
+        $password = "";
+        $host = "localhost";
+
+                    $polaczenie = mysqli_connect($host, $user, $password, $dbname);
+
+            
+            $records = $polaczenie->query(" SELECT komentarze.Zawartosc, komentarze.uzytkownik FROM komentarze");
+                        while(list($zawartosc2, $uzytkownik2) = mysqli_fetch_row($records)){
+                            echo $uzytkownik2 . "<br>" . $zawartosc2 . '<br>' . '<br>';
                         }
-                    $pdo = null;
-                    }
-                    catch (PDOException){
-                            echo "Błąd połączenia"; 
-                        }
-                ?>
+            mysqli_close($polaczenie);
+        ?>
+        
+        </div>
+        <br>
+        <a href="main.php">Strona glowna</a>
+        <a href="komentarz.php">Napisz swoj komentarz </a>
             </form>
+            
         </div>
         </div>
     </div>
 </body>
 </html>
-
-<!-- działa, ale zrób z zapomniałem hasła liste wszystkich użytkowników -->

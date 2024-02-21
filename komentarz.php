@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="list.css">
-    <title>Roast Website</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="komentarz.css">
 </head>
 <body>
     <div id="hero">
@@ -32,32 +32,23 @@
         <div class="login-box">
             <div class="title-box">
                 <div class="login-title">
-                    <h2>Roast Website</h2>
+                    <h2>Komentarz</h2>
                 </div>
             </div>
             
-            <form class="part-box" action="logowanie.php" method="POST">
+            <form class="part-box" action="kom-php.php" method="POST">
+            <h3><label for="komentarz">Twój komentarz</label></h3>
+            <input type="text" id="uzytkownik" name="uzytkownik">
                 <div class="login-desc">
-                    <h3>Lista użytkowników</h3>
+                    
+                    <input type="text" id="komentarz" name="komentarz">
                 </div>
-                <?php
-                    try{
-                        $pdo = new PDO('mysql:host=localhost;dbname=jetdatabase', 'root');
-                        $zapytanie = $pdo->query('SELECT idu, login, password FROM users');
-                        foreach ($zapytanie as $wiersz){
-                            echo $wiersz['idu'] . ' - ' . $wiersz['login'] . ' - ' . $wiersz['password'] . '<br>';
-                        }
-                    $pdo = null;
-                    }
-                    catch (PDOException){
-                            echo "Błąd połączenia"; 
-                        }
-                ?>
+                <button>Wyślij</button>
+                <div id="komentarz1"></div>
             </form>
+            
         </div>
         </div>
     </div>
 </body>
 </html>
-
-<!-- działa, ale zrób z zapomniałem hasła liste wszystkich użytkowników -->

@@ -20,7 +20,6 @@
             $password = $_POST["password"];
             $user = $_POST["login"];
 
-
             $dodaj = "INSERT INTO users VALUES ('', '$user', '$password')";
             $zapytanie = mysqli_query($polaczenie, $dodaj);
             if (!$zapytanie === true) {
